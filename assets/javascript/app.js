@@ -29,6 +29,9 @@ function submitAnswer() {
        }
     } 
     // if user click submit button without selecting any option, alert box should be say "please select choice answer".
+    // write a function for time up 
+    // display the results rights and wrongs
+    // restart the game
     if(!checked) {
       alert("please select choice answer");
       return;

@@ -5,3 +5,18 @@ h1
     
     display:inline-block; 
  }
+
+ body 
+ {
+     
+    
+ }
+
+ .container
+   {background:#ffffff;
+    padding:10px;
+    margin-top:80px;
+    width:960px;   
+    margin: auto;
+    background-color: rgb(153, 201, 76);
+     }
