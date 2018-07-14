@@ -1,16 +1,12 @@
 
 h1
  {  
-    background-color: black ;
+    
     
     display:inline-block; 
  }
 
- body 
- {
-     
-    
- }
+body{background-image:url("../images/background.jpg");}
 
  .container
    {background:#ffffff;
@@ -18,5 +14,7 @@ h1
     margin-top:80px;
     width:960px;   
     margin: auto;
-    background-color: rgb(153, 201, 76);
+    background-color: rgb(203, 238, 147);
+    align-content:center;
+    text-align: center;
      }

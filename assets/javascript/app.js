@@ -3,7 +3,7 @@
 var count =60,
 timer = setInterval(function()
    {
-       $("#counter").html(count--);
+       $("#counter").html("Time Left: "  +count--);
        console.log(counter)
        if(count == 0 ) clearInterval(timer);
 
