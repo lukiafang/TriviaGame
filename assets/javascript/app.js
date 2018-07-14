@@ -16,6 +16,10 @@ timer = setInterval(function()
 
 
 //
+var right=0;
+var wrong=0;
+var unanswered=0;
+
 function submitAnswer() {
     var radios = document.getElementsByName("choice");
     var i = 0, len = radios.length;
@@ -31,6 +35,9 @@ function submitAnswer() {
     // if user click submit button without selecting any option, alert box should be say "please select choice answer".
     // write a function for time up 
     // display the results rights and wrongs
+
+
+
     // restart the game
     if(!checked) {
       alert("please select choice answer");
@@ -38,11 +45,11 @@ function submitAnswer() {
     }
     // Correct answer
     if(userAnswer === "Scripting") {
-       alert("Answer is correct!");
+       right++;
     }
     // incorrect answer
     else {
-       alert("Answer is wrong!");
+       wrong++;
     }
     
   }
