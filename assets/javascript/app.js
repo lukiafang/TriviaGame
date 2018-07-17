@@ -1,55 +1,102 @@
+//need a start button
+      var startBtn 
 
-//set timer countdown& timeout session 
-var count =60,
-timer = setInterval(function()
-   {
-       $("#counter").html("Time Left: "  +count--);
-       console.log(counter)
-       if(count == 0 ) clearInterval(timer);
+      var count =60
+      
 
-   }, 1000 
-);
-// Set the date we're counting down to
+      var right=0;
+      var wrong=0;
+      var unanswered=0;
 
+        $('#startbutton').on("click",function(event){
 
-//once timeup display result 
+          //hide the startbutton
+          $("#startbutton").hide();
 
+          //set timer
+          setInterval(function()
+          {
+            $("#counter").html("Time Left: "  +count--);
 
-//
-var right=0;
-var wrong=0;
-var unanswered=0;
+            //display result
+                  if(count == 0)
+              { 
+                submitAnswer()
+               
 
-function submitAnswer() {
-    var radios = document.getElementsByName("choice");
-    var i = 0, len = radios.length;
-    var checked = false;
-    var userAnswer;
-    
-    for( ; i < len; i++ ) {
-       if(radios[i].checked) {
-         checked = true;
-         userAnswer = radios[i].value;
-       }
-    } 
-    // if user click submit button without selecting any option, alert box should be say "please select choice answer".
-    // write a function for time up 
-    // display the results rights and wrongs
+              }; 
+            //console.log(counter)
+          },1000);
 
 
 
-    // restart the game
-    if(!checked) {
-      alert("please select choice answer");
-      return;
-    }
-    // Correct answer
-    if(userAnswer === "Scripting") {
-       right++;
-    }
-    // incorrect answer
-    else {
-       wrong++;
-    }
-    
-  }
+
+          //display the QnA
+          $("#QnA").removeClass("hidden");
+          
+         
+
+
+         
+      }, 
+    )
+        
+          
+
+
+
+     
+      
+
+         
+           
+
+
+
+      //once timeup display result 
+
+      //count the right answers and wrongs
+        function submitAnswer() 
+        {
+          var radios = document.getElementsByName("choice");
+          var i = 0, len = radios.length;
+          var checked = false;
+          var userAnswer;
+          
+          for( ; i < len; i++ ) 
+          {
+            if(radios[i].checked) 
+                {
+                  checked = true;
+                  userAnswer = radios[i].value;
+                };
+          
+          }       // if user click submit button without selecting any option, alert box should be say "please select choice answer".
+
+                // display the results rights and wrongs
+
+
+
+          
+            if(!checked) 
+              {
+              unanswered++;
+              }
+            // Correct answer
+            if(userAnswer === "Scripting") 
+              {
+                right++;
+                console.log(right)
+              }
+            // incorrect answer
+            else 
+              {
+                wrong++;
+                console.log(wrong)
+              }
+              
+              $("#counter").addClass("hidden");
+              $("#QnA").addClass("hidden");
+              $("#result").html("Right Answers: "+right+ "<br>"+"Wrong Answers: " +wrong+"<br>"+ "Unanswered: "+unanswered)
+        };
+          

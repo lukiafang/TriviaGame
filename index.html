@@ -13,46 +13,30 @@
 
     </head>
 <body>
+        
+
+
     <div class="container">
      <h1  class="font-effect-ice" style="font-size:60px; font-family:Shojumaru;">Totally Trivial Trivia!</h1>
     
-     <div id="counter" class="font-effect-fire-animation" style="font-size:50px; font-family:Sonsie One;">Time Left: 60</div>
+         <button type="button" id="startbutton"  style="font-size:50px; font-family:Sonsie One;" >Start Game</button>
+          <div id="counter" class="font-effect-fire-animation" style="font-size:50px; font-family:Sonsie One;"></div>
 
-     <div id="Q&A"> 
-        <h2 >JavaScript is ______ Language.</h2><br>
-            <form >
-                <input type="radio" name="choice" value="Scripting"> Scripting
-                <input type="radio" name="choice" value="Programming"> Programming
-                <input type="radio" name="choice" value="Application"> Application
-                <input type="radio" name="choice" value="None of These"> None of These
-            </form>
+        <div id="QnA" class="hidden"> 
             <h2 >JavaScript is ______ Language.</h2><br>
-            <form >
-                <input type="radio" name="choice" value="Scripting"> Scripting
-                <input type="radio" name="choice" value="Programming"> Programming
-                <input type="radio" name="choice" value="Application"> Application
-                <input type="radio" name="choice" value="None of These"> None of These
-            </form>
-            <h2 >JavaScript is ______ Language.</h2><br>
-            <form >
-                <input type="radio" name="choice" value="Scripting"> Scripting
-                <input type="radio" name="choice" value="Programming"> Programming
-                <input type="radio" name="choice" value="Application"> Application
-                <input type="radio" name="choice" value="None of These"> None of These
-            </form>
-            <h2 >JavaScript is ______ Language.</h2><br>
-            <form >
-                <input type="radio" name="choice" value="Scripting"> Scripting
-                <input type="radio" name="choice" value="Programming"> Programming
-                <input type="radio" name="choice" value="Application"> Application
-                <input type="radio" name="choice" value="None of These"> None of These
-            </form>
+                <form >
+                    <input type="radio" name="choice" value="Scripting"> Scripting
+                    <input type="radio" name="choice" value="Programming"> Programming
+                    <input type="radio" name="choice" value="Application"> Application
+                    <input type="radio" name="choice" value="None of These"> None of These
+                </form>
+                
 
 
-
-        <button onclick="submitAnswer()"Submit Answer></button>
+            <button style="font-size:40px; font-family:Sonsie One"; onclick="submitAnswer()"Submit Answer>Submit</button>
         </div>
-        <div id="result"></div>
+
+        <div id="result" style="font-size:50px; font-family:Shojumaru;"></div>
     </div>
 
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
