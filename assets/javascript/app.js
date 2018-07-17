@@ -14,7 +14,7 @@
           $("#startbutton").hide();
 
           //set timer
-          setInterval(function()
+          timer=setInterval(function()
           {
             $("#counter").html("Time Left: "  +count--);
 
@@ -22,10 +22,11 @@
                   if(count == 0)
               { 
                 submitAnswer()
+                
                
 
               }; 
-            //console.log(counter)
+            console.log(counter)
           },1000);
 
 
@@ -62,6 +63,9 @@
           var i = 0, len = radios.length;
           var checked = false;
           var userAnswer;
+
+          clearInterval(timer)
+          
           
           for( ; i < len; i++ ) 
           {
