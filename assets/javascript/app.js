@@ -4,9 +4,9 @@
       var count =60
       
 
-      var right=0;
-      var wrong=0;
-      var unanswered=0;
+      var right;
+      var wrong;
+      var unanswered
 
         $('#startbutton').on("click",function(event){
 
@@ -74,31 +74,18 @@
                   checked = true;
                   userAnswer = radios[i].value;
                 };
-          
-          }       // if user click submit button without selecting any option, alert box should be say "please select choice answer".
+               
+          }
+                 // if user click submit button without selecting any option, alert box should be say "please select choice answer".
 
                 // display the results rights and wrongs
-
-
+              right = $('input:checked[value=correct]').length
+              wrong = $('input:checked[value=wrong]').length
+              unanswered = 4-right-wrong
+            
+                
 
           
-            if(!checked) 
-              {
-              unanswered++;
-              }
-            // Correct answer
-            if(userAnswer === "Scripting") 
-              {
-                right++;
-                console.log(right)
-              }
-            // incorrect answer
-            else 
-              {
-                wrong++;
-                console.log(wrong)
-              }
-              
               $("#counter").addClass("hidden");
               $("#QnA").addClass("hidden");
               $("#result").html("Right Answers: "+right+ "<br>"+"Wrong Answers: " +wrong+"<br>"+ "Unanswered: "+unanswered)
